@@ -52,7 +52,7 @@ robot:
             [-0.048, 0.000, 180]]
     # Degree of the plotted cone angle of the sensor
     # Careful: the sensor only has a single detection line! The cone is purely for plotting.
-    cone_angle: 10
+    cone_angle: 5
   # Configures the wheels of the robot
   wheel:
     # Wheel radius

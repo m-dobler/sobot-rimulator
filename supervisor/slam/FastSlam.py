@@ -138,7 +138,7 @@ class FastSlam(Slam):
         particles = self.clear_importance_factors(particles)
         for i, (distance, theta) in enumerate(z):
             measurement = np.asarray([distance, theta])
-            # Skip the measuremnt if no landmark was detected
+            # Skip the measurement if no landmark was detected
             if not self.supervisor.proximity_sensor_positive_detections()[i]:
                 continue
             for particle in particles:

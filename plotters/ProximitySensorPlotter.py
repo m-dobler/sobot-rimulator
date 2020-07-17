@@ -55,9 +55,9 @@ class ProximitySensorPlotter:
 
         # shade the sensor cone according to positive detection
         if self.proximity_sensor.target_delta is not None:
-            alpha = 0.9 - 0.8 * self.proximity_sensor.target_delta
+            alpha = 1
         else:
-            alpha = 0.1
+            alpha = 0.4
 
         # add the sensor cone to the frame
         frame.add_polygons([sensor_cone_poly],
