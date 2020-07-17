@@ -3,9 +3,19 @@
 ![Screenshot](documentation/GUI.png)
 
 This project is an extension of the [sobot rimulator](https://github.com/nmccrea/sobot-rimulator) developed by Nick McCrea
-which allows the simulation of a mobile robot in a map of obstacles that must be avoided.
-This extension includes the integration of the EKFSLAM and FastSLAM algorithms to perform an estimation of the current robot state
-and its surrounding environment based on its previous motion commands and proximity sensor readings.
+which allows the simulation of a mobile robot in a 2-dimensional map of obstacles.
+
+## Main features
+
+- Simulation of a mobile robot using proximity sensors to avoid obstacles
+- Estimation of the robot pose and obstacle locations using the EKF SLAM or FastSLAM algorithms
+- Concurrent evaluation of estimation accuracies
+- Reproducible experiments by saving and loading maps
+- Simulation controllable by a variety of parameters, further described [here](#Configuration)
+
+This project could serve as an accessible introduction to robot programming and enable further research of simple robotics 
+algorithms. For example, possible extensions to this simulator could be the estimation of a robots traversed path or an 
+improvement of its navigation by using the map estimations of the SLAM system.
 
 ## Setup
 
@@ -70,7 +80,7 @@ over the course of the simulation. Only displayed if the SLAM evaluation is enab
 
 ## Configuration
 
-The simulator can be configured by a variety of paramters. The default configuration file is [config.yaml](config.yaml), 
+The simulator can be configured by a variety of parameters. The default configuration file is [config.yaml](config.yaml), 
 where all parameters are documented. The configuration file [original_config.yaml](original_config.yaml) does not include
 any of the extensions made and performs completely identical to the original sobot rimulator.
 
